@@ -61,6 +61,6 @@
     "dist"
   ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@david-sling"
+    "registry": "https://npm.pkg.github.com/"
   }
 }
