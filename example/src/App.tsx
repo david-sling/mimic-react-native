@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { ExampleComponent } from 'mimic-react-native'
+import { View } from 'mimic-react-native'
 import 'mimic-react-native/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <View style={{ color: 'red' }}>5</View>
 }
 
 export default App
