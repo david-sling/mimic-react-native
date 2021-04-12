@@ -1,6 +1,6 @@
 {
   "name": "mimic-react-native",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Used to mimic react-native components in react-dom",
   "author": "david-sling",
   "license": "MIT",
@@ -61,6 +61,6 @@
     "dist"
   ],
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   }
 }
