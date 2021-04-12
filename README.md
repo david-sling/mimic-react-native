@@ -2,6 +2,8 @@
 
 > Used to mimic react-native components in react-dom
 
+### Under Development
+
 [![NPM](https://img.shields.io/npm/v/mimic-react-native.svg)](https://www.npmjs.com/package/mimic-react-native) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
