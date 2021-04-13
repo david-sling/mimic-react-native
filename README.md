@@ -14,6 +14,19 @@ npm install --save mimic-react-native
 
 ## Usage
 
+#### Changing from react-native to react-dom
+
+Change `react-native` imports to `mimic-react-native`
+
+E.g:
+
+```bash
+import {View, Text} from 'react-native' //DELETE
+import {View, Text} from 'mimic-react-native' //ADD
+```
+
+#### Using Directly in react-dom
+
 ```tsx
 import React, { useState } from 'react'
 
@@ -40,6 +53,51 @@ const ExampleApp = () => {
 }
 
 export default App
+```
+
+#### Typescript Interfaces:
+
+```ts
+interface AllComponents {
+  //All Components share these props.
+  style?: React.CSSProperties
+  children?: React.ReactNode | string
+  className?: string
+  id?: string
+}
+
+interface TextProps extends AllComponents {
+  children?: React.ReactNode | string
+  elementType?: keyof JSX.IntrinsicElements &
+    ('p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'a')
+}
+
+interface ButtonProps extends AllComponents {
+  children: string
+  dontCapitalize?: boolean
+  color?: string
+  textColor?: string
+  //color represents the backgroundColor
+}
+
+interface ImageProps extends AllComponents {
+  source?: { uri: string }
+}
+
+interface SwitchProps extends AllComponents {
+  size?: number
+  value?: any
+  onValueChange?: any
+  thumbColor?: string
+  trackColor?: TrackColor
+}
+
+interface TextInputProps extends AllComponents {
+  value?: string
+  onChangeText?: any
+  onChange?: any
+  //onChange and onChangeText represent the same. onChangeText overwrites onChange
+}
 ```
 
 ## License
