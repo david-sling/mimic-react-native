@@ -1,12 +1,26 @@
 import React from 'react'
+import { component } from '../utils/Interfaces'
 
-export default function Switch(props: any) {
+interface Props extends component {
+  size?: number
+  value?: any
+  onValueChange?: any
+  thumbColor?: string
+  trackColor?: TrackColor
+}
+
+interface TrackColor {
+  true?: any
+  false?: any
+}
+
+export default function Switch(props: Props) {
   var {
     size = 20,
     value,
     onValueChange,
     thumbColor = 'silver',
-    trackColor = {}
+    trackColor = { true: null, false: null }
   } = props
   trackColor.true = trackColor?.true || '#81b0ff'
   trackColor.false = trackColor?.false || '#767577'

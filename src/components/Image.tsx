@@ -1,6 +1,11 @@
 import React from 'react'
+import { component } from '../utils/Interfaces'
 
-export default function Image(props: any) {
+interface Props extends component {
+  source?: { uri: string }
+}
+
+export default function Image(props: Props) {
   const { source } = props
   return <img {...props} src={source?.uri} />
 }

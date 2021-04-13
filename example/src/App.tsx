@@ -14,11 +14,17 @@ const App = () => {
   const [checked, setChecked] = useState(false)
   return (
     <View>
-      <Text style={{ color: 'red' }}>five</Text>
+      <Text elementType='h1' style={{ color: 'grey' }}>
+        STRING
+      </Text>
       <TextInput onChangeText={() => console.log(5)} />
       <ScrollView>5</ScrollView>
       <Button>button</Button>
-      <Switch onValueChange={() => setChecked(!checked)} value={checked} />
+      <Switch
+        size={10}
+        onValueChange={() => setChecked(!checked)}
+        value={checked}
+      />
     </View>
   )
 }

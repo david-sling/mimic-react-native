@@ -1,6 +1,17 @@
-import React from 'react'
+import * as React from 'react'
+import { component } from '../utils/Interfaces'
 
-export default function Text(props: any) {
-  var { children } = props
-  return <p {...props}>{children}</p>
+interface Props extends component {
+  children?: React.ReactNode | string
+  elementType?: keyof JSX.IntrinsicElements &
+    ('p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'a')
+}
+
+export default function (props: Props): JSX.Element {
+  const { children, elementType: ElementType = 'p', style } = props
+  return (
+    <ElementType {...props} style={style}>
+      {children}
+    </ElementType>
+  )
 }

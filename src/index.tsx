@@ -5,8 +5,8 @@ import TextInput from './components/TextInput'
 import Button from './components/Button'
 import Switch from './components/Switch'
 
-import utils from './utils'
+import services from './services'
 
 const ScrollView = View
 
-export { View, Text, Image, TextInput, ScrollView, Button, Switch, utils }
+export { View, Text, Image, TextInput, ScrollView, Button, Switch, services }
