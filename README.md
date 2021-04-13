@@ -1,6 +1,8 @@
 # mimic-react-native
 
-> Used to mimic react-native components in react-dom
+Used to mimic react-native components in react-dom
+
+Click [here](https://www.npmjs.com/package/mimic-react-native) to see in npmjs.com
 
 ### Under Development
 
