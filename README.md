@@ -9,7 +9,7 @@
 ## Install
 
 ```bash
-npm install --save mimic-react-native
+npm install mimic-react-native
 ```
 
 ## Usage

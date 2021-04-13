@@ -1,6 +1,6 @@
 {
   "name": "mimic-react-native",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Used to mimic react-native components in react-dom",
   "author": "david-sling",
   "license": "MIT",
