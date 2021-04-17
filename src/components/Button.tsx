@@ -6,10 +6,20 @@ interface Props extends component {
   dontCapitalize?: boolean
   color?: string
   textColor?: string
+  onClick?: any
+  onPress?: any
 }
 
 export default function Button(props: Props) {
-  var { children = '', style, dontCapitalize, textColor, color } = props
+  var {
+    children = '',
+    style,
+    dontCapitalize,
+    textColor,
+    color,
+    onPress,
+    onClick
+  } = props
   style = {
     padding: '10px 20px',
     fontWeight: 600,
@@ -21,7 +31,7 @@ export default function Button(props: Props) {
   }
   if (!dontCapitalize) children = children.toUpperCase()
   return (
-    <button {...props} style={style}>
+    <button {...props} onClick={onPress || onClick} style={style}>
       {children}
     </button>
   )

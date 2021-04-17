@@ -6,9 +6,25 @@ import {
   TextInput,
   ScrollView,
   Button,
-  Switch
+  Switch,
+  FlatList
 } from 'mimic-react-native'
 import 'mimic-react-native/dist/index.css'
+
+const data = [
+  {
+    key: 1,
+    name: 'a'
+  },
+  {
+    key: 2,
+    name: 'b'
+  },
+  {
+    key: 3,
+    name: 'c'
+  }
+]
 
 const App = () => {
   const [checked, setChecked] = useState(false)
@@ -19,11 +35,16 @@ const App = () => {
       </Text>
       <TextInput onChangeText={() => console.log(5)} />
       <ScrollView>5</ScrollView>
-      <Button>button</Button>
+      <Button onClick={() => console.log(5)}>button</Button>
       <Switch
         size={10}
         onValueChange={() => setChecked(!checked)}
         value={checked}
+      />
+      <FlatList
+        keyExtractor={(item) => item.key}
+        data={data}
+        renderItem={({ item }: any) => <p>{item.name}</p>}
       />
     </View>
   )

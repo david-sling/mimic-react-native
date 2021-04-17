@@ -80,6 +80,9 @@ interface ButtonProps extends AllComponents {
   color?: string
   textColor?: string
   //color represents the backgroundColor
+  onPress: function
+  onClick: function
+  //onPress overrides onClick
 }
 
 interface ImageProps extends AllComponents {
