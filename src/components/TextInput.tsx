@@ -2,7 +2,7 @@ import React from 'react'
 import { component } from '../utils/Interfaces'
 
 interface Props extends component {
-  value?: string
+  value?: string | number
   onChangeText?: any
   onChange?: any
 }

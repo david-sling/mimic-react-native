@@ -2,7 +2,6 @@ import React from 'react'
 import { component } from '../utils/Interfaces'
 
 interface Props extends component {
-  children: string
   dontCapitalize?: boolean
   color?: string
   textColor?: string
@@ -29,7 +28,7 @@ export default function Button(props: Props) {
     backgroundColor: color || 'rgb(33, 150, 243)',
     color: textColor || '#fff'
   }
-  if (!dontCapitalize) children = children.toUpperCase()
+  if (!dontCapitalize) children = children?.toString().toUpperCase() || ''
   return (
     <button {...props} onClick={onPress || onClick} style={style}>
       {children}
